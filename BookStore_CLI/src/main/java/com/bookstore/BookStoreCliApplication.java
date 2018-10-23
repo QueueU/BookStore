@@ -1,7 +1,5 @@
 package com.bookstore;
 
-
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 import com.bookstore.config.SecurityUtility;
 import com.bookstore.domain.User;
@@ -17,17 +16,17 @@ import com.bookstore.domain.security.UserRole;
 import com.bookstore.service.UserService;
 
 @SpringBootApplication
-public class BookStoreCliApplication  implements CommandLineRunner  {
 
-	@Autowired(required=false)
-	private UserService userService;
+public class BookStoreCliApplication implements CommandLineRunner {
+
 	
+	@Autowired
+	private UserService userService;
 	
 	
 	public static void main(String[] args) {
 		SpringApplication.run(BookStoreCliApplication.class, args);
 	}
-	
 	
 	public void run(String... args) throws Exception {
 		User user1 =new User();
@@ -49,6 +48,5 @@ public class BookStoreCliApplication  implements CommandLineRunner  {
 	}
 	
 	
+	
 }
-
-

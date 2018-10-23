@@ -28,7 +28,7 @@ import com.bookstore.service.BookService;
 @RequestMapping("/book")
 public class BookResource {
 	
-	@Autowired(required=false)
+	@Autowired
 	private BookService bookService;
 	
 	@RequestMapping(value="/addBookList",method=RequestMethod.POST)
