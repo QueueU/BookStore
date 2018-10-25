@@ -62,7 +62,7 @@ public class BookResource {
 			return new ResponseEntity("Upload failed!", HttpStatus.BAD_REQUEST);
 		}
 	}
-	@RequestMapping("/bookList")
+	@RequestMapping("/booksList")
 	public List<Book> getBookList()
 	{
 		return bookService.findAll();
